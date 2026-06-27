@@ -51,17 +51,20 @@ const faqs = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fffaf3] text-[#3b2f2f]">
-      <section className="px-6 py-6">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between">
-          <a href="#" className="flex items-center gap-4">
+      <section className="px-5 py-5 md:px-6 md:py-6">
+        <nav className="mx-auto flex max-w-6xl flex-col items-center gap-5 md:flex-row md:justify-between">
+          <a href="#" className="flex items-center justify-center gap-3">
             <img
               src="/products/hummingbird-logo.png"
               alt="Minni Made Gifts hummingbird logo"
-              className="h-35 w-35 object-contain"
+              className="h-20 w-20 object-contain md:h-28 md:w-28"
             />
-            <p className="text-6xl font-semibold tracking-wide">Minni Made Gifts</p>
+            <p className="text-3xl font-semibold tracking-wide md:text-6xl">
+              Minni Made Gifts
+            </p>
           </a>
-          <div className="flex flex-wrap justify-center gap-4 text-sm font-medium md:gap-6">
+
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-medium md:gap-6">
             <a href="#shop">Shop</a>
             <a href="#custom">Custom Orders</a>
             <a href="#about">About</a>
@@ -71,12 +74,12 @@ export default function Home() {
         </nav>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center">
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-10 md:grid-cols-2 md:items-center md:py-16">
         <div>
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
             Handmade • Hand-painted • Giftable
           </p>
-          <h1 className="text-5xl font-bold leading-tight md:text-6xl">
+          <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
             Thoughtful hand-painted gifts made with care.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-[#6b5b53]">
