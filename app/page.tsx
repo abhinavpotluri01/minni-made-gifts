@@ -266,7 +266,7 @@ export default function Home() {
             colors, and when you need it by.
           </p>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
             <a
               href="mailto:minnimadegifts@gmail.com"
               className="rounded-2xl bg-white/15 p-5 font-semibold transition hover:bg-white/20"
@@ -278,7 +278,7 @@ export default function Home() {
               className="rounded-2xl bg-white/15 p-5 font-semibold transition hover:bg-white/20"
             >
               Instagram
-            </a>
+            </a> 
           </div>
         </div>
       </section>
