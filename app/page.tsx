@@ -9,7 +9,7 @@ const products = [
   },
   {
     name: "Peacock Tote",
-    category: "Hand-Painted Tote Bsag",
+    category: "Hand-Painted Tote Bag",
     price: "$50",
     image: "/products/peacock-tote.jpeg",
     description:
@@ -61,7 +61,7 @@ export default function Home() {
             />
             <p className="text-6xl font-semibold tracking-wide">Minni Made Gifts</p>
           </a>
-          <div className="hidden gap-6 text-sm font-medium md:flex">
+          <div className="flex flex-wrap justify-center gap-4 text-sm font-medium md:gap-6">
             <a href="#shop">Shop</a>
             <a href="#custom">Custom Orders</a>
             <a href="#about">About</a>
