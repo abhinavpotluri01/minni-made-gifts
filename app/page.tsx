@@ -279,12 +279,6 @@ export default function Home() {
             >
               Instagram
             </a>
-            <a
-              href="https://www.tiktok.com/"
-              className="rounded-2xl bg-white/15 p-5 font-semibold transition hover:bg-white/20"
-            >
-              TikTok
-            </a>
           </div>
         </div>
       </section>
