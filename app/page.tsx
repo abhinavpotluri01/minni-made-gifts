@@ -1,65 +1,294 @@
-import Image from "next/image";
+const products = [
+  {
+    name: "Purple Hummingbird Tote",
+    category: "Hand-Painted Tote Bag",
+    price: "$40+",
+    image: "/products/hummingbird-crossbody.jpeg",
+    description:
+      "A soft floral tote featuring a hand-painted hummingbird and nature-inspired details.",
+  },
+  {
+    name: "Peacock Tote",
+    category: "Hand-Painted Tote Bag",
+    price: "$50+",
+    image: "/products/peacock-tote.jpeg",
+    description:
+      "A colorful statement tote with detailed peacock artwork, perfect as a unique gift.",
+  },
+  {
+    name: "Butterfly Garden Tote",
+    category: "Hand-Painted Tote Bag",
+    price: "$40+",
+    image: "/products/butterfly-tote.jpeg",
+    description:
+      "A whimsical butterfly design painted by hand on a cotton tote bag.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Are all products hand-painted?",
+    answer:
+      "Yes. Each item is painted by hand, so small variations make every piece unique.",
+  },
+  {
+    question: "Do you accept custom orders?",
+    answer:
+      "Yes. Customers can request colors, flowers, animals, initials, or inspiration photos.",
+  },
+  {
+    question: "How long do custom orders take?",
+    answer:
+      "Most custom orders take 1–3 weeks depending on the design and current order volume.",
+  },
+  {
+    question: "How should I care for the bags?",
+    answer:
+      "Spot clean gently and avoid harsh washing. Handmade painted items should be treated with care.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-[#fffaf3] text-[#3b2f2f]">
+      <section className="px-6 py-6">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between">
+          <a href="#" className="flex items-center gap-4">
+            <img
+              src="/products/hummingbird-logo.png"
+              alt="Minni Made Gifts hummingbird logo"
+              className="h-35 w-35 object-contain"
+            />
+            <p className="text-6xl font-semibold tracking-wide">Minni Made Gifts</p>
+          </a>
+          <div className="hidden gap-6 text-sm font-medium md:flex">
+            <a href="#shop">Shop</a>
+            <a href="#custom">Custom Orders</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </section>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+            Handmade • Hand-painted • Giftable
+          </p>
+          <h1 className="text-5xl font-bold leading-tight md:text-6xl">
+            Thoughtful hand-painted gifts made with care.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+          <p className="mt-6 max-w-xl text-lg leading-8 text-[#6b5b53]">
+            Nature-inspired tote bags, crossbody bags, and keychains painted by
+            hand for birthdays, thank-you gifts, everyday use, and custom
+            keepsakes.
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#shop"
+              className="rounded-full bg-[#7f5f8d] px-6 py-3 text-center font-semibold text-white shadow-sm transition hover:opacity-90"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              View Designs
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#custom"
+              className="rounded-full border border-[#7f5f8d] px-6 py-3 text-center font-semibold text-[#7f5f8d] transition hover:bg-[#f3e8f7]"
             >
-              Learning
-            </a>{" "}
-            center.
+              Request Custom Order
+            </a>
+          </div>
+        </div>
+
+        <div className="rounded-[2rem] bg-[#f1dfef] p-6 shadow-sm">
+          <div className="flex h-[300px] w-full items-center justify-center overflow-hidden rounded-[1.5rem] bg-white/70">
+            <img
+              src="/products/collage.png"
+              alt="Collage Photo"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="shop" className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+              Featured Designs
+            </p>
+            <h2 className="mt-3 text-4xl font-bold">Shop handmade favorites</h2>
+          </div>
+          <p className="max-w-md text-[#6b5b53]">
+            Each design is individually painted, making every bag
+            different and one-of-a-kind.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {products.map((product) => (
+            <article
+              key={product.name}
+              className="rounded-[1.5rem] bg-white p-5 shadow-sm"
+            >
+              <div className="mb-5 aspect-square overflow-hidden rounded-[1rem] bg-[#f8edf5]">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <p className="text-sm font-medium text-[#8a6f4d]">
+                {product.category}
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold">{product.name}</h3>
+              <p className="mt-2 text-lg font-semibold text-[#7f5f8d]">
+                {product.price}
+              </p>
+              <p className="mt-3 leading-7 text-[#6b5b53]">
+                {product.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-[#f7efe4] px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+              How It Works
+            </p>
+            <h2 className="mt-3 text-4xl font-bold">A simple handmade process</h2>
+          </div>
+
+          <div className="rounded-[1.5rem] bg-white p-6 shadow-sm">
+            <p className="text-2xl font-bold text-[#7f5f8d]">01</p>
+            <h3 className="mt-4 text-xl font-semibold">Choose a design</h3>
+            <p className="mt-3 leading-7 text-[#6b5b53]">
+              Pick from existing nature-inspired designs or request something
+              personalized.
+            </p>
+          </div>
+
+          <div className="rounded-[1.5rem] bg-white p-6 shadow-sm">
+            <p className="text-2xl font-bold text-[#7f5f8d]">02</p>
+            <h3 className="mt-4 text-xl font-semibold">Painted by hand</h3>
+            <p className="mt-3 leading-7 text-[#6b5b53]">
+              Your item is carefully hand-painted, packaged, and prepared as a
+              thoughtful gift.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="custom" className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-[2rem] bg-[#dfe8d7] p-8 md:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#5f7354]">
+            Custom Orders
+          </p>
+          <h2 className="mt-3 text-4xl font-bold">
+            Have an idea? We can paint it.
+          </h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#4f5f48]">
+            Request flowers, butterflies, birds, initials, colors, or a design
+            inspired by a special occasion. Custom orders are perfect for
+            birthdays, thank-you gifts, bridesmaids, teachers, and personal
+            keepsakes.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="mt-8 inline-block rounded-full bg-[#5f7354] px-6 py-3 font-semibold text-white transition hover:opacity-90"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Start a Custom Request
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="about" className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center">
+        <div className="rounded-[2rem] bg-[#f8edf5] p-6 shadow-sm">
+          <div className="aspect-square overflow-hidden rounded-[1.5rem] bg-white/70">
+            <img
+              src="/about/artist-photo.png"
+              alt="Artist painting a Minni Made Gifts design"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+            About the Artist
+          </p>
+          <h2 className="mt-3 text-4xl font-bold">
+            Made slowly, carefully, and by hand.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-[#6b5b53]">
+            Minni Made Gifts is a small handmade art business creating
+            thoughtful, hand-painted pieces inspired by nature, color, and the
+            joy of giving something personal.
+          </p>
+          <p className="mt-4 text-lg leading-8 text-[#6b5b53]">
+            Every bag is painted one brushstroke at a time, making each piece a
+            unique gift with its own character.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" className="bg-white px-6 py-16">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+            FAQ
+          </p>
+          <h2 className="mt-3 text-4xl font-bold">Important info</h2>
+
+          <div className="mt-8 space-y-4">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="rounded-2xl bg-[#fffaf3] p-6">
+                <h3 className="text-xl font-semibold">{faq.question}</h3>
+                <p className="mt-3 leading-7 text-[#6b5b53]">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-[2rem] bg-[#7f5f8d] p-8 text-white md:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/70">
+            Contact
+          </p>
+          <h2 className="mt-3 text-4xl font-bold">Ready to order?</h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85">
+            Send us a message with the product type, design idea, preferred
+            colors, and when you need it by.
+          </p>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <a
+              href="mailto:minnimadegifts@gmail.com"
+              className="rounded-2xl bg-white/15 p-5 font-semibold transition hover:bg-white/20"
+            >
+              Email Us
+            </a>
+            <a
+              href="https://www.instagram.com/minnimadegifts/"
+              className="rounded-2xl bg-white/15 p-5 font-semibold transition hover:bg-white/20"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.tiktok.com/"
+              className="rounded-2xl bg-white/15 p-5 font-semibold transition hover:bg-white/20"
+            >
+              TikTok
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="px-6 py-8 text-center text-sm text-[#6b5b53]">
+        <p>© 2026 Minni Made Gifts. Handmade with care.</p>
+      </footer>
+    </main>
   );
 }
