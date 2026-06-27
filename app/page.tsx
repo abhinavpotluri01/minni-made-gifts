@@ -1,8 +1,8 @@
 const products = [
   {
-    name: "Purple Hummingbird Tote",
+    name: "Purple Hummingbird Crossbody",
     category: "Hand-Painted Tote Bag",
-    price: "$40+",
+    price: "$40",
     image: "/products/hummingbird-crossbody.jpeg",
     description:
       "A soft floral tote featuring a hand-painted hummingbird and nature-inspired details.",
@@ -10,7 +10,7 @@ const products = [
   {
     name: "Peacock Tote",
     category: "Hand-Painted Tote Bag",
-    price: "$50+",
+    price: "$50",
     image: "/products/peacock-tote.jpeg",
     description:
       "A colorful statement tote with detailed peacock artwork, perfect as a unique gift.",
@@ -18,7 +18,7 @@ const products = [
   {
     name: "Butterfly Garden Tote",
     category: "Hand-Painted Tote Bag",
-    price: "$40+",
+    price: "$40",
     image: "/products/butterfly-tote.jpeg",
     description:
       "A whimsical butterfly design painted by hand on a cotton tote bag.",
