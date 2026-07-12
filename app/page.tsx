@@ -194,9 +194,9 @@ export default function Home() {
             Have an idea? We can paint it.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[#4f5f48]">
-            Request flowers, butterflies, birds, initials, colors, or a design
+            Request designs of flowers, butterflies, birds, initials, colors, or a design
             inspired by a special occasion. Custom orders are perfect for
-            birthdays, thank-you gifts, bridesmaids, teachers, and personal
+            birthdays, sweets sixteens, thank-you gifts, bridesmaids, teachers, and personal
             keepsakes.
           </p>
           <a
