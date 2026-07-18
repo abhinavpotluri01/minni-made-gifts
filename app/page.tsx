@@ -132,7 +132,7 @@ export default function Home() {
               href="#custom"
               className="rounded-full border border-[#7f5f8d] px-6 py-3 text-center font-semibold text-[#7f5f8d] transition hover:bg-[#f3e8f7]"
             >
-              Request Custom Order
+              Request a Custom Order
             </a>
           </div>
         </div>
@@ -187,6 +187,15 @@ export default function Home() {
               </p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href="#custom"
+            className="inline-block rounded-full bg-[#7f5f8d] px-6 py-3 font-semibold text-white shadow-sm transition hover:opacity-90"
+          >
+            Request a Custom Order
+          </a>
         </div>
       </section>
 
