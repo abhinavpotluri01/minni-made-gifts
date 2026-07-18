@@ -290,7 +290,7 @@ export default function Home() {
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-contain"
                         />
                       </div>
                       <figcaption className="mt-3 text-sm font-medium text-[#6b5b53]">
