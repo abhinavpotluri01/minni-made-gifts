@@ -1,11 +1,11 @@
 const products = [
   {
     name: "Purple Hummingbird Crossbody",
-    category: "Hand-Painted Tote Bag",
+    category: "Hand-Painted Crossbody Bag",
     price: "$25",
     image: "/products/hummingbird-crossbody.jpeg",
     description:
-      "A soft floral tote featuring a hand-painted hummingbird and nature-inspired details.",
+      "A soft floral crossbody bag featuring a hand-painted hummingbird and nature-inspired details.",
   },
   {
     name: "Peacock Tote",
@@ -22,6 +22,39 @@ const products = [
     image: "/products/butterfly-tote.jpeg",
     description:
       "A whimsical butterfly design painted by hand on a cotton tote bag.",
+  },
+];
+
+const collections = [
+  {
+    name: "Coastal Wedding Keepsakes",
+    theme: "New England Wedding Collection",
+    description:
+      "A hand-painted wedding collection inspired by soft coastal blues, hydrangeas, sailboats, seaside cliffs, and the quiet beauty of Portsmouth, Rhode Island.",
+    note:
+      "Created as custom keepsakes for Anna and Andrew’s wedding celebration, this collection includes four painted tote bags and a personalized wedding venue painting.",
+    toteItems: [
+      {
+        name: "Cliffside Cottage Tote",
+        image: "/collections/rhode-island-wedding/coastal-tote-1.jpeg",
+      },
+      {
+        name: "Sailboat Hydrangea Tote",
+        image: "/collections/rhode-island-wedding/coastal-tote-2.jpeg",
+      },
+      {
+        name: "Lighthouse Coast Tote",
+        image: "/collections/rhode-island-wedding/coastal-tote-3.jpeg",
+      },
+      {
+        name: "Ocean View Hydrangea Tote",
+        image: "/collections/rhode-island-wedding/coastal-tote-4.jpeg",
+      },
+    ],
+    painting: {
+      name: "Custom Wedding Venue Painting",
+      image: "/collections/rhode-island-wedding/coastal-painting.jpeg",
+    },
   },
 ];
 
@@ -66,6 +99,7 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-medium md:gap-6">
             <a href="#shop">Shop</a>
+            <a href="#collections">Collections</a>
             <a href="#custom">Custom Orders</a>
             <a href="#about">About</a>
             <a href="#faq">FAQ</a>
@@ -123,8 +157,8 @@ export default function Home() {
             <h2 className="mt-3 text-4xl font-bold">Shop handmade favorites</h2>
           </div>
           <p className="max-w-md text-[#6b5b53]">
-            Each design is individually painted, making every bag
-            different and one-of-a-kind.
+            Each design is individually painted, making every bag different and
+            one-of-a-kind.
           </p>
         </div>
 
@@ -162,7 +196,9 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
               How It Works
             </p>
-            <h2 className="mt-3 text-4xl font-bold">A simple handmade process</h2>
+            <h2 className="mt-3 text-4xl font-bold">
+              A simple handmade process
+            </h2>
           </div>
 
           <div className="rounded-[1.5rem] bg-white p-6 shadow-sm">
@@ -185,6 +221,100 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="collections" className="px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+                Collections
+              </p>
+              <h2 className="mt-3 text-4xl font-bold">
+                Special occasion keepsakes
+              </h2>
+            </div>
+
+            <p className="max-w-md text-[#6b5b53]">
+              Custom collections created around meaningful themes, events, and
+              memories.
+            </p>
+          </div>
+
+          {collections.map((collection) => (
+            <article
+              key={collection.name}
+              className="rounded-[2rem] bg-white p-6 shadow-sm md:p-8"
+            >
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+                  {collection.theme}
+                </p>
+
+                <h3 className="mt-3 text-3xl font-bold md:text-4xl">
+                  {collection.name}
+                </h3>
+
+                <p className="mt-5 text-lg leading-8 text-[#6b5b53]">
+                  {collection.description}
+                </p>
+
+                <p className="mt-4 leading-7 text-[#6b5b53]">
+                  {collection.note}
+                </p>
+
+                <a
+                  href="#custom"
+                  className="mt-8 inline-block rounded-full bg-[#7f5f8d] px-6 py-3 font-semibold text-white transition hover:opacity-90"
+                >
+                  Request a Custom Collection
+                </a>
+              </div>
+
+              <div className="mt-12">
+                <p className="mb-5 text-center text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+                  Painted Tote Bags
+                </p>
+
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {collection.toteItems.map((item) => (
+                    <figure key={item.name} className="text-center">
+                      <div className="aspect-square overflow-hidden rounded-[1.25rem] bg-[#f8edf5]">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <figcaption className="mt-3 text-sm font-medium text-[#6b5b53]">
+                        {item.name}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mx-auto mt-12 max-w-md">
+                <p className="mb-5 text-center text-sm font-semibold uppercase tracking-[0.25em] text-[#8a6f4d]">
+                  Personalized Painting
+                </p>
+
+                <figure className="text-center">
+                  <div className="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-[#f8edf5]">
+                    <img
+                      src={collection.painting.image}
+                      alt={collection.painting.name}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <figcaption className="mt-3 text-sm font-medium text-[#6b5b53]">
+                    {collection.painting.name}
+                  </figcaption>
+                </figure>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section id="custom" className="mx-auto max-w-6xl px-6 py-16">
         <div className="rounded-[2rem] bg-[#dfe8d7] p-8 md:p-12">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#5f7354]">
@@ -194,10 +324,10 @@ export default function Home() {
             Have an idea? We can paint it.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[#4f5f48]">
-            Request designs of flowers, butterflies, birds, initials, colors, or a design
-            inspired by a special occasion. Custom orders are perfect for
-            birthdays, sweet sixteens, thank-you gifts, bridesmaids, teachers, and personal
-            keepsakes.
+            Request designs of flowers, butterflies, birds, initials, colors, or
+            a design inspired by a special occasion. Custom orders are perfect
+            for birthdays, sweet sixteens, thank-you gifts, bridesmaids,
+            teachers, and personal keepsakes.
           </p>
           <a
             href="#contact"
@@ -208,7 +338,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center">
+      <section
+        id="about"
+        className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center"
+      >
         <div className="rounded-[2rem] bg-[#f8edf5] p-6 shadow-sm">
           <div className="aspect-square overflow-hidden rounded-[1.5rem] bg-white/70">
             <img
@@ -278,7 +411,7 @@ export default function Home() {
               className="rounded-2xl bg-white/15 p-5 font-semibold transition hover:bg-white/20"
             >
               Instagram
-            </a> 
+            </a>
           </div>
         </div>
       </section>
